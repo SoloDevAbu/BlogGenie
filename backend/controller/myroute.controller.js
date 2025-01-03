@@ -10,4 +10,4 @@ const getAllNews = async (req, res) => {
     }
 };
 
-module.exports = { getNews, postNews, getAllNews };
+module.exports = { getAllNews };
