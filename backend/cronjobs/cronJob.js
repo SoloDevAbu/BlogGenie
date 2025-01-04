@@ -1,6 +1,7 @@
 const axios = require('axios');
 const cron = require('node-cron');
 const Me = require('../db');
+require('dotenv').config();
 
 const fetchAndStoreNews = async () => {
     const url = 'https://api.worldnewsapi.com/top-news?source-country=us&language=en';
@@ -13,7 +14,7 @@ const fetchAndStoreNews = async () => {
             },
         });
 
-        const topNews = response.data.response.top_news;
+        const topNews = response.data.top_news;
 
         for (const newsCategory of topNews) {
             for (const article of newsCategory.news) {
@@ -39,7 +40,7 @@ const fetchAndStoreNews = async () => {
 };
 
 const startNewsCron = () => {
-    cron.schedule('0 */6 * * *', fetchAndStoreNews);
+    cron.schedule('0 */3 * * *', fetchAndStoreNews);
 };
 
 module.exports = { startNewsCron };
