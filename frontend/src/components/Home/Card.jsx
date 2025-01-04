@@ -3,7 +3,7 @@ import arrow from '../../assets/right-arrow.png'
 
 const Card = ({image, title, summary}) => {
   return (
-    <div className=' bg-neutral-300 p-2 md:p-4 rounded-md'>
+    <div className=' flex flex-col justify-between bg-neutral-300 p-2 md:p-4 rounded-md'>
         <img src={image} alt={title} className='rounded-md'/>
         <div className='pt-2'>
             <h1 className='font-bold font-sans text-sm'>{title}</h1>
