@@ -39,7 +39,7 @@ const FullArticle = () => {
                 <img src={image} alt="Image of the article" className='rounded-md aspect-auto w-2/3' />
             </div>
             <div className='flex flex-col m-2 py-2 md:m-4 lg:m-5 md:px-8'>
-                <p className='text-sm font-sans font-medium pb-2 md:text-base lg:text-lg'><span className='underline text-base font-sans font-semibold md:text-lg lg:text-xl'>Articel:</span>{' '}{text}</p>
+                <p className='text-sm font-sans font-medium pb-2 md:text-base lg:text-lg'><span className='underline text-base font-sans font-semibold md:text-lg lg:text-xl'>Article:</span>{' '}{text}</p>
                 <p className='text-sm font-sans font-medium  md:text-base lg:text-lg'><span className='underline text-base font-sans font-semibold md:text-lg lg:text-xl'>Summary:</span>{' '}{summary}</p>
             </div>
             <a href={source} className='text-blue-500 cursor-pointer'>Visit Official Page</a>

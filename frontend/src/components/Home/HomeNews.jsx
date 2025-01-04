@@ -12,7 +12,7 @@ const HomeNews = () => {
     const fetchNews = async () => {
       try {
         const response = await axios.get('https://bloggenie.onrender.com/api/v1/me/news')
-        setNews(response.data);
+        setNews(response.data.reverse());
         setLoading(false);
       } catch (error) {
         setError(error.message);
