@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 const Home = lazy(() => import('./pages/Home'))
+const FullArticle = lazy(() => import('./pages/FullArticle'))
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/article/:id' element={<FullArticle/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

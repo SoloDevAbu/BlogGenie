@@ -30,7 +30,7 @@ const HomeNews = () => {
         <div className='grid grid-cols-2 justify-between gap-4 px-5 md:grid-cols-3 lg:grid-cols-4 pt-5 md:pt-8 lg:pt-10'>
          {loading && (<CardSkeleton number={8}/>)}
             {news.map((article) => (
-                <Card key={article._id} image={article.image} title={article.title} summary={article.summary}/>                          
+                <Card key={article._id} articleId={article._id} image={article.image} title={article.title} summary={article.summary}/>                          
             ))}
         </div>
     </div>
